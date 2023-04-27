@@ -243,4 +243,6 @@ app.delete(
   }
 );
 
-app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`));
+app.listen(port, "0.0.0.0", () =>
+  console.log(`Server running on port ${apiPort}`)
+);

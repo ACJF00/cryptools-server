@@ -1,2 +1,0 @@
-MONGO_URI = "mongodb+srv://Charly:bcx5odq3yg1cgI4S@go-fullstack.74vdo.mongodb.net/Cryptools?retryWrites=true&w=majority"
-JWT_SECRET = "SalutlaBandeABAdeEEEEr"
