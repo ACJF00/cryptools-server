@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
 const apiPort = 5000;
+const port = process.env.PORT || 3000;
 const path = require("path");
 const connectDB = require("./config/db");
 const jwt = require("jsonwebtoken");
@@ -244,5 +245,5 @@ app.delete(
 );
 
 app.listen(port, "0.0.0.0", () =>
-  console.log(`Server running on port ${apiPort}`)
+  console.log(`Server running on port ${port}`)
 );
