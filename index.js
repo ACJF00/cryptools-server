@@ -15,7 +15,7 @@ const mongoose = require("mongoose");
 
 dotenv.config({ path: path.resolve(__dirname, ".env") });
 
-//______________________________ MIDDLEWARES ______________________________
+//______________________________ MIDDLEWARES ______________________________//
 app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: true }));
