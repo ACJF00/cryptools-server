@@ -3,8 +3,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
-const apiPort = 5000;
-const port = process.env.PORT || 3000;
+// const apiPort = 5000;
+const port = process.env.PORT || 4000;
 const path = require("path");
 const connectDB = require("./config/db");
 const jwt = require("jsonwebtoken");
@@ -106,6 +106,9 @@ app.post("/api/logout", (req, res) => {
 
   // Send a success response
   res.status(200).json({ message: "Logout successful" });
+
+  //send back to home page
+  res.redirect("/");
 });
 
 
