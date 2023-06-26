@@ -85,7 +85,6 @@ app.post("/api/login", async (req, res) => {
   }
 
   // Check if password is correct
-  console.log("USER", user.password);
   const isPasswordCorrect = await bcrypt.compare(password, user.password);
 
   // If password is incorrect, return error
@@ -99,6 +98,16 @@ app.post("/api/login", async (req, res) => {
   // Send token in response
   res.status(200).json({ token });
 });
+
+//user logout
+app.post("/api/logout", (req, res) => {
+  // Clear the cookie containing the JWT token
+  res.clearCookie("token");
+
+  // Send a success response
+  res.status(200).json({ message: "Logout successful" });
+});
+
 
 // add token to monitoredToken array
 app.post("/api/user/addToken", authMiddleware, async (req, res) => {
